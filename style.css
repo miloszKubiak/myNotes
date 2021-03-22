@@ -119,5 +119,5 @@ body {
 .note-panel .error {
     margin: 10px;
     color: red;
-    visibility: ;
+    visibility: hidden;
 }
