@@ -54,10 +54,25 @@ const createNote = () => {
     textArea.value = '';
     category.selectedIndex = 0;
     notePanel.style.display = 'none';
+    checkColor(newNote);
 }
 
 const selectValue = () => {
     selectedValue = category.options[category.selectedIndex].text;
+}
+
+const checkColor = note => {
+    switch (selectedValue) {
+        case 'Shopping':
+            note.style.backgroundColor = 'rgb(72,255,0)';
+            break;
+        case 'Work':
+            note.style.backgroundColor = 'rgb(255,243,0)';
+            break;
+        case 'Other':
+            note.style.backgroundColor = 'rgb(0,170,255)';
+            break;
+    }
 }
 
 addBtn.addEventListener('click', openPanel);
